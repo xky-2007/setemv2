@@ -1,6 +1,7 @@
 # seteam workspace · SETeam2 多Agent协作工作区
 
 > 每个 Agent 拥有独立 workspace，通过文件驱动协作
+> 协议版本：PROTOCOL.md v1.0 · 2026-04-26
 
 ---
 
@@ -10,37 +11,44 @@
 seteam workspace/
 │
 ├── README.md                    # 本文件
+├── common/
+│   ├── PROTOCOL.md             # 【核心】终极协作协议 v1.0
+│   ├── DISCUSSION_PROTOCOL.md   # 讨论机制规范
+│   ├── templates/              # 模板库
+│   ├── knowledge/             # 知识库
+│   ├── discussions/           # 主流程讨论记录
+│   └── missions/             # 任务队列
 │
 ├── requirement_clarifier/       # ① 需求澄清专家
-│   ├── SOUL.md                  # Agent灵魂
-│   ├── memory/                  # Agent记忆
-│   ├── skills/                  # Agent技能
-│   ├── tasks/                  # 待处理任务
-│   └── outputs/                # 产出文件
-│
-├── requirement_analyzer/        # ② 需求分析专家
 │   ├── SOUL.md
 │   ├── memory/
 │   ├── skills/
 │   ├── tasks/
 │   └── outputs/
 │
-├── experience_matcher/         # ③ 经验匹配专家
+├── requirement_analyzer/         # ② 需求分析专家
 │   ├── SOUL.md
 │   ├── memory/
 │   ├── skills/
 │   ├── tasks/
 │   └── outputs/
 │
-├── planner/                    # ④ 流程规划专家
+├── experience_matcher/          # ③ 经验匹配专家
 │   ├── SOUL.md
 │   ├── memory/
 │   ├── skills/
 │   ├── tasks/
 │   └── outputs/
 │
-├── designer/                   # ⑤ AI团队设计专家
+├── planner/                     # ④ 流程规划专家
 │   ├── SOUL.md
+│   ├── memory/
+│   ├── skills/
+│   ├── tasks/
+│   └── outputs/
+│
+├── designer/                    # ⑤ AI团队设计专家 【动态扩编权限】
+│   ├── SOUL.md                 # v3.0 含内圈讨论机制
 │   ├── memory/
 │   ├── skills/
 │   ├── tasks/
@@ -60,74 +68,119 @@ seteam workspace/
 │   ├── tasks/
 │   └── outputs/
 │
-├── reviewer/                   # ⑧ 独立评分专家 [v2.1新增]
+├── reviewer/                   # ⑧ 独立评分专家
 │   ├── SOUL.md
 │   ├── memory/
 │   ├── skills/
 │   ├── tasks/
 │   └── outputs/
 │
-├── archivist/                  # ⑨ 经验沉淀专家
-│   ├── SOUL.md
-│   ├── memory/
-│   ├── skills/
-│   ├── tasks/
-│   └── outputs/
-│
-└── common/                     # 共享资源
-    ├── templates/              # 模板库
-    ├── knowledge/             # 知识库
-    └── workflows/              # 工作流配置
+└── archivist/                 # ⑨ 经验沉淀专家
+    ├── SOUL.md
+    ├── memory/
+    ├── skills/
+    ├── tasks/
+    └── outputs/
 ```
 
 ---
 
-## 流水线
+## 七阶段完整执行流程
 
 ```
-用户需求
-   │
-   ▼
-① requirement_clarifier  ──→ 01_clarified.json
-   │
-   ▼
-② requirement_analyzer   ──→ 02_analyzed.json
-   │
-   ▼
-③ experience_matcher     ──→ 03_matched.json
-   │
-   ▼
-④ planner               ──→ 04_planned.json
-   │
-   ▼
-⑤ designer              ──→ 05_designed.json
-   │
-   ▼
-⑥ orchestrator         ──→ 06_orchestrated.json + 工作区
-   │
-   ▼
-⑦ supervisor            ──→ 07_executed.json
-   │
-   ▼
-⑧ reviewer             ──→ 08_reviewed.json + hints
-   │
-   ▼
-⑨ archivist            ──→ knowledge/entries/
+┌─────────────────────────────────────────────────────────┐
+│ 阶段1：九大常驻主Agent圆桌研讨                          │
+│                                                         │
+│  clarifier → analyzer → matcher → planner             │
+│  四方依次发言，独立输出结论                              │
+└─────────────────────────────────────────────────────────┘
+                          ↓
+┌─────────────────────────────────────────────────────────┐
+│ 阶段2：Designer动态扩编                                │
+│                                                         │
+│  判断人手/专业是否缺口                                  │
+│  按需创建临时专项子Agent                                 │
+│  组建【内圈专项讨论组】                                 │
+└─────────────────────────────────────────────────────────┘
+                          ↓
+┌─────────────────────────────────────────────────────────┐
+│ 阶段3：内圈封闭专项讨论                                 │
+│                                                         │
+│  常驻核心组 + 临时子Agent 深度辩论                     │
+│ 收敛【统一初始方案草案】                                 │
+│  Designer可销毁/重建不合格子Agent                        │
+└─────────────────────────────────────────────────────────┘
+                          ↓
+┌─────────────────────────────────────────────────────────┐
+│ 阶段4：Orchestrator编排修正                             │
+│                                                         │
+│  接收草案 → 校验落地可行性                             │
+│  处理配置/路径/环境冲突                                 │
+│  输出【编排修正后正式方案】                              │
+└─────────────────────────────────────────────────────────┘
+                          ↓
+┌─────────────────────────────────────────────────────────┐
+│ 阶段5：全员二次复盘大讨论                               │
+│                                                         │
+│  九大常驻 + 存活临时子Agent 交叉审核                    │
+│  Reviewer前置四维预判评分                              │
+│  消除分歧，达成全员共识                                  │
+└─────────────────────────────────────────────────────────┘
+                          ↓
+┌─────────────────────────────────────────────────────────┐
+│ 阶段6：定稿移交执行                                     │
+│                                                         │
+│  全员共识 → 移交Supervisor                            │
+│  启动四维打分，不合格触发回退（<60分回退，最多3次）      │
+└─────────────────────────────────────────────────────────┘
+                          ↓
+┌─────────────────────────────────────────────────────────┐
+│ 阶段7：收尾沉淀闭环                                     │
+│                                                         │
+│  Archivist统一复盘                                      │
+│  整理execution_lessons.md                               │
+│  归档知识库/模板库                                      │
+│  【全部临时子Agent销毁】                                 │
+└─────────────────────────────────────────────────────────┘
 ```
+
+---
+
+## 评分与风控
+
+| 规则 | 标准 |
+|------|------|
+| 四维评分 | 完整性25 + 准确性25 + 可执行性25 + 规范性25 = 100 |
+| Reviewer | 独立逐角色打分，<80分必须输出改进Hint |
+| Supervisor | <60分触发回退，上限3次 |
+| 评分差距 | Supervisor与Reviewer差距>40分 → 强制重启全员复盘 |
 
 ---
 
 ## 协作规则
 
-1. **每个 Agent 独立 workspace**，通过状态文件交接
-2. **依赖驱动**：下游 Agent 轮询等待上游 done 信号
-3. **reviewer 独立评分**：每个 Agent 产出单独打分，不通过则回退
-4. **回退 ≤ 3 次**：超过则升级人工
-5. **经验传承**：archivist 沉淀 lessons 供 matcher 检索
+1. **每个Agent独立workspace**，通过状态文件交接
+2. **圆桌发言**：每轮发言必须标注【角色名】，禁止合并发言
+3. **内圈保密**：临时子Agent只在内圈讨论，不参与全局主流程
+4. **讨论收敛**：3轮内必须收敛，Designer拥有强制裁判权
+5. **子Agent生命周期**：任务结束自动销毁，不留存常驻
+6. **回退机制**：评分<60分回退对应Agent，最多3次
+
+---
+
+## 讨论文件规范
+
+| 文件位置 | 说明 |
+|---------|------|
+| `common/discussions/` | 主流程圆桌讨论 |
+| `projects/<id>/shared/discussions/` | 任务内圈讨论 |
+| `common/discussions/DISCUSSION_PROTOCOL.md` | 讨论格式规范 |
+| `common/PROTOCOL.md` | 完整协议文本 |
 
 ---
 
 ## 版本
 
 - SETeam2 v2.1
+- PROTOCOL v1.0
 - 2026-04-26
