@@ -1,0 +1,23 @@
+{
+  "status": "designed",
+  "discussion_triggered": true,
+  "discussion_summary": {
+    "rounds": 1,
+    "decisions": [
+      "单页HTML+GSAP",
+      "加meta description",
+      "加鼠标跟随光效"
+    ]
+  },
+  "team": {
+    "roles": [
+      {
+        "id": "builder"
+      },
+      {
+        "id": "reviewer"
+      }
+    ]
+  },
+  "completed_at": "2026-04-26T11:19:40Z"
+}

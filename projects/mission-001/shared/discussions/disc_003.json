@@ -1,0 +1,10 @@
+{
+  "id": "disc_experience_matcher_1777202380",
+  "from": "experience_matcher",
+  "to": "planner",
+  "topic": "历史经验可借鉴",
+  "type": "suggestion",
+  "message": "jxnu-enrollment-v5项目有完整设计系统，可复用GSAP动画+玻璃态卡片参数",
+  "timestamp": "2026-04-26T11:19:40Z",
+  "status": "open"
+}

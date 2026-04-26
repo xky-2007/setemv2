@@ -1,0 +1,10 @@
+{
+  "id": "disc_planner_1777202380",
+  "from": "planner",
+  "to": "designer",
+  "topic": "团队规模确认",
+  "type": "question",
+  "message": "P1有3个任务并行，Builder要几个？",
+  "timestamp": "2026-04-26T11:19:40Z",
+  "status": "open"
+}

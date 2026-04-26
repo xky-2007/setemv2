@@ -1,0 +1,10 @@
+{
+  "id": "disc_requirement_clarifier_1777202380",
+  "from": "requirement_clarifier",
+  "to": "requirement_analyzer",
+  "topic": "需求模糊讨论",
+  "type": "question",
+  "message": "用户说要有动画要好看，confidence只有0.65，要继续吗？",
+  "timestamp": "2026-04-26T11:19:40Z",
+  "status": "open"
+}

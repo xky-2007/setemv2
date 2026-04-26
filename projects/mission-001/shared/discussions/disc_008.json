@@ -1,0 +1,10 @@
+{
+  "id": "disc_requirement_clarifier_1777202380",
+  "from": "requirement_clarifier",
+  "to": "designer",
+  "topic": "鼠标光效建议",
+  "type": "suggestion",
+  "message": "用户说好看，建议加鼠标跟随光效，Awwwards常见",
+  "timestamp": "2026-04-26T11:19:40Z",
+  "status": "open"
+}

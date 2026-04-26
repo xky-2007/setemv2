@@ -1,0 +1,10 @@
+{
+  "id": "disc_requirement_analyzer_1777202380",
+  "from": "requirement_analyzer",
+  "to": "designer",
+  "topic": "SEO需求",
+  "type": "suggestion",
+  "message": "同意轻量方案，但需要加meta description做SEO",
+  "timestamp": "2026-04-26T11:19:40Z",
+  "status": "open"
+}

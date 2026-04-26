@@ -1,0 +1,10 @@
+{
+  "id": "disc_planner_1777202380",
+  "from": "planner",
+  "to": "experience_matcher",
+  "topic": "收到借鉴建议",
+  "type": "agreement",
+  "message": "同意复用jxnu设计系统，但需调整配色为个人风格",
+  "timestamp": "2026-04-26T11:19:40Z",
+  "status": "open"
+}
