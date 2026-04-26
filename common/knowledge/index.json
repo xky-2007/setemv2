@@ -1,0 +1,33 @@
+﻿{
+  "last_updated": "2026-04-26",
+  "total_entries": 3,
+  "entries": [
+    {
+      "id": "2026-04-25-discussion-test",
+      "title": "讨论型协作首次测试",
+      "date": "2026-04-25",
+      "task_type": "system-test",
+      "score": 88,
+      "key_success": "讨论机制有效：8条消息1轮收敛",
+      "tags": ["discussion", "multi-agent", "test"]
+    },
+    {
+      "id": "2026-04-26-quanji-research",
+      "title": "全季酒店品牌调研",
+      "date": "2026-04-26",
+      "task_type": "research",
+      "score": 88,
+      "key_success": "内圈讨论机制生效：designer补充设计参数速查表",
+      "tags": ["hotel", "brand", "research", "design"]
+    },
+    {
+      "id": "2026-04-26-event-planning",
+      "title": "社团迎新活动策划",
+      "date": "2026-04-26",
+      "task_type": "event-planning",
+      "score": 90,
+      "key_success": "内圈讨论有效：finance精确拆分预算，safety守住安全底线",
+      "tags": ["event", "planning", "campus", "activity"]
+    }
+  ]
+}
