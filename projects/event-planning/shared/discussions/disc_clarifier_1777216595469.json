@@ -1,0 +1,11 @@
+{
+  "id": "disc_clarifier_1777216595469",
+  "from": "clarifier",
+  "to": "all",
+  "topic": "需求澄清与置信度评估",
+  "type": "question",
+  "message": "用户需求是完整的6项交付物，置信度0.85。核心问题：社团类型是什么（学术/文艺/体育/志愿服务）？预算总额大概多少？目标人数规模？这些直接影响方案设计，建议在analyzer阶段补全。clarifier建议：置信度足够，可以推进，但我会持续关注这些未澄清参数。",
+  "timestamp": "2026-04-26T23:16:35+08:00",
+  "status": "open",
+  "binding": false
+}
