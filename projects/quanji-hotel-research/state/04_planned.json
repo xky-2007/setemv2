@@ -1,0 +1,38 @@
+{
+  "status": "planned",
+  "phases": [
+    {
+      "id": "P1",
+      "name": "信息收集",
+      "tasks": [
+        "web_search调研",
+        "网页内容抓取"
+      ],
+      "parallel": 2
+    },
+    {
+      "id": "P2",
+      "name": "整理分析",
+      "tasks": [
+        "提炼品牌设计语言",
+        "整理色彩/材质/排版"
+      ],
+      "parallel": 2
+    },
+    {
+      "id": "P3",
+      "name": "输出报告",
+      "tasks": [
+        "写调研报告.md",
+        "更新knowledge"
+      ],
+      "parallel": 2
+    }
+  ],
+  "total_hours": 2,
+  "risk_points": [
+    "网站反爬导致抓取失败",
+    "中文编码问题"
+  ],
+  "completed_at": "2026-04-26T19:36:42+08:00"
+}

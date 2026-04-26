@@ -1,0 +1,37 @@
+{
+  "status": "reviewed",
+  "score": 88,
+  "checks": [
+    {
+      "item": "色彩有hex值",
+      "status": "PASS",
+      "note": "包含#FAFAF8/#C4A574/#4A7C59等具体色值"
+    },
+    {
+      "item": "有情绪基调描述",
+      "status": "PASS",
+      "note": "包含\"宁静、温暖、有分寸、不急躁\"等描述"
+    },
+    {
+      "item": "有对设计的启发",
+      "status": "PASS",
+      "note": "包含配色方案+动画风格建议"
+    },
+    {
+      "item": "品牌演变完整",
+      "status": "PASS",
+      "note": "3.0到5.0完整演变"
+    },
+    {
+      "item": "中文编码正确",
+      "status": "PASS",
+      "note": "UTF-8无BOM"
+    }
+  ],
+  "passed": 5,
+  "issues": 0,
+  "suggestions": [
+    "建议下次增加对标网站截图对比"
+  ],
+  "completed_at": "2026-04-26T19:36:42+08:00"
+}

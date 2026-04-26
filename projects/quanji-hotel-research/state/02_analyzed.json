@@ -1,0 +1,39 @@
+{
+  "status": "analyzed",
+  "parameters": {
+    "brand_name": {
+      "type": "string",
+      "value": "全季酒店"
+    },
+    "scope": {
+      "type": "list",
+      "value": [
+        "品牌理念",
+        "视觉设计",
+        "官网结构",
+        "竞品",
+        "启发"
+      ]
+    },
+    "target_audience": {
+      "type": "string",
+      "value": "设计师"
+    },
+    "output_format": {
+      "type": "string",
+      "value": "调研报告.md"
+    }
+  },
+  "constraints": [
+    "信息真实可查",
+    "重点在视觉设计",
+    "需要有可执行的启发"
+  ],
+  "complexity": "low",
+  "acceptance_criteria": [
+    "包含完整品牌设计演变（3.0到5.0）",
+    "包含具体色彩色值",
+    "包含对页面设计有指导意义的启发"
+  ],
+  "completed_at": "2026-04-26T19:36:42+08:00"
+}

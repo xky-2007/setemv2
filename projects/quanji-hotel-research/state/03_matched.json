@@ -1,0 +1,16 @@
+{
+  "status": "matched",
+  "match_rate": 0.65,
+  "match_type": "partial",
+  "reference": {
+    "project_id": "jxnu-enrollment-v6",
+    "path": "xky agent/projects/jxnu-enrollment-v6/design-system.md"
+  },
+  "reuse": [
+    "调研流程模板",
+    "色彩系统提炼方法",
+    "design-system.md格式"
+  ],
+  "note": "可复用调研方法论，但具体内容（全季品牌）需要全新调研",
+  "completed_at": "2026-04-26T19:36:42+08:00"
+}
