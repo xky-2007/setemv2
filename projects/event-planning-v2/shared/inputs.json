@@ -1,0 +1,11 @@
+{
+  "task_type": "event-planning",
+  "domain": "campus-organization",
+  "target": "college-freshmen-welcome-event",
+  "constraints": [
+    "offline",
+    "budget-conscious",
+    "executable"
+  ],
+  "output_format": "markdown"
+}

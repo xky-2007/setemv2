@@ -1,0 +1,8 @@
+{
+  "mission_id": "mission_001",
+  "created_at": "2026-04-27T12:54:00+08:00",
+  "task": "为大学生社团策划一场完整的线下迎新活动方案",
+  "requirements": "活动主题/流程安排/物料预算/人员分工/风险应急预案/宣传文案，要求可直接落地执行",
+  "user": "webchat",
+  "status": "initialized"
+}
